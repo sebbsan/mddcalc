@@ -1,0 +1,42 @@
+{
+  "name": "mddcalc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "./index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "ava",
+    "lint": "eslint ./lib "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebbsan/mddcalc.git"
+  },
+  "keywords": [],
+  "author": "Sebastian Weikart <me@sebweik.art>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/sebbsan/mddcalc/issues"
+  },
+  "homepage": "https://github.com/sebbsan/mddcalc#readme",
+  "devDependencies": {
+    "ava": "^3.13.0",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "prettier": "^2.1.1"
+  },
+  "ava": {
+    "files": [
+      "test/**/*",
+      "!test/exclude-files-in-this-directory",
+      "!**/exclude-files-with-this-name.*"
+    ]
+  },
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "yargs": "^16.0.3"
+  }
+}
