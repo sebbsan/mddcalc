@@ -4,8 +4,9 @@ Calculates the maximum draw down of a given asset.
 
 ## Pre-Requisites
 
-[] Install node.js latest version (this was tested with node 14)
-[] Clone the repository using `git clone git@github.com:sebbsan/mddcalc.git`
+- Install node.js latest version (this was tested with node 14)
+- Clone the repository using `git clone git@github.com:sebbsan/mddcalc.git`
+- go into the root directory with `cd mddcalc`
 
 ## How to use
 
