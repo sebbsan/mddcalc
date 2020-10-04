@@ -20,5 +20,8 @@ It can be executed by either executing `./index.js [my parameters]` or entering 
 
 ## Examples
 
+Calculate maximum draw down of a given file with default dates:
 `./index.js -f prices.csv`
+
+Specify buy date and sell date:
 `/index.js -f prices.csv -b 2014-06-02 -s 2017-12-20`
