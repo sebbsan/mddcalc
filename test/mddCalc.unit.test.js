@@ -1,6 +1,6 @@
 const test = require('ava');
 const {
-  calculateMaximumDrawdown,
+  calculateDrawDown,
   getTroughValue,
   getPeakValue,
   calculateMaximumDrawdownFromPriceList,
@@ -19,7 +19,7 @@ const TEST_DATE_PRICE_LIST = [
 ];
 
 test('calculates mdd', (t) => {
-  const mddValue = calculateMaximumDrawdown(500, 1000);
+  const mddValue = calculateDrawDown(500, 1000);
   t.is(mddValue, -0.5);
 });
 
@@ -36,6 +36,25 @@ test('get peak value', (t) => {
 test('calculates mdd from Price List', (t) => {
   const mddValue = calculateMaximumDrawdownFromPriceList([500, 1000, 534.21, 343.23, 100]);
   t.is(mddValue, -0.9);
+});
+
+test('calculates mdd from Price List with local minimum', (t) => {
+  const mddValue = calculateMaximumDrawdownFromPriceList([
+    500,
+    211,
+    934,
+    534.21,
+    343.23,
+    100,
+    121,
+    1000,
+    99,
+    50,
+    1050,
+    1000,
+    800,
+  ]);
+  t.is(mddValue, -0.95);
 });
 
 test('filter prices by date', (t) => {
